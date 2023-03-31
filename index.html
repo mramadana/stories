@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <title>stories</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+
+    <!-- demo styles -->
+    <link rel="stylesheet" href="demo/style.css" />
+
+    <!-- lib styles -->
+    <link rel="stylesheet" href="dist/zuck.css" />
+
+    <!-- lib skins -->
+    <link rel="stylesheet" href="dist/skins/snapgram.css" />
+    <link rel="stylesheet" href="dist/skins/vemdezap.css" />
+    <link rel="stylesheet" href="dist/skins/facesnap.css" />
+    <link rel="stylesheet" href="dist/skins/snapssenger.css" />
+  </head>
+
+  <body>
+    <h1 id="header">&nbsp;</h1>
+    
+
+    <div id="stories" class="storiesWrapper"></div>
+
+    <script src="dist/zuck.js"></script>
+    <script src="demo/script.js"></script>
+
+    <script>
+      var currentSkin = getCurrentSkin();
+      var stories = window.Zuck(document.querySelector('#stories'), {
+        backNative: true,
+        previousTap: true,
+        skin: currentSkin['name'],
+        autoFullScreen: currentSkin['params']['autoFullScreen'],
+        avatars: currentSkin['params']['avatars'],
+        paginationArrows: currentSkin['params']['paginationArrows'],
+        list: currentSkin['params']['list'],
+        cubeEffect: currentSkin['params']['cubeEffect'],
+        localStorage: true,
+        stories: [
+          {
+            id: 'ramon',
+            photo:
+              'assets/my-img.jpg',
+            name: 'Ramadan',
+            time: timestamp(),
+            items: [
+              {
+                id: 'ramon-1',
+                type: 'photo',
+                length: 3,
+                src: 'assets/my-img.jpg',
+                preview:
+                'assets/my-img.jpg',
+                link: '',
+                linkText: false,
+                time: timestamp()
+              },
+              {
+                id: 'ramon-2',
+                type: 'video',
+                length: 0,
+                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/2.mp4',
+                preview:
+                'assets/my-img.jpg',
+                link: '',
+                linkText: false,
+                time: timestamp()
+              },
+              {
+                id: 'ramon-3',
+                type: 'photo',
+                length: 3,
+                src: 'assets/profile-img.jpg',
+                preview:
+                  'assets/my-img.jpg',
+                link: 'https://www.facebook.com/mohamed.ramadan.5080/',
+                linkText: 'Visit my Portfolio on fb',
+                time: timestamp()
+              }
+            ]
+          },
+          {
+            id: 'rema',
+            photo:'assets/rema-3.jpg',
+            name: 'Rema',
+            time: timestamp(),
+            items: [
+              {
+                id: 'rema-2',
+                type: 'photo',
+                length: 3,
+                src: 'assets/rema-2.jpg',
+                preview:
+                'assets/rema-2.jpg',
+                link: '',
+                linkText: false,
+                time: timestamp()
+              },
+              {
+                id: 'rema-3',
+                type: 'photo',
+                length: 3,
+                src: 'assets/rema-1.jpg',
+                preview:
+                'assets/rema-1.jpg',
+                link: '',
+                linkText: false,
+                time: timestamp()
+              },
+              {
+                id: 'rema-1',
+                type: 'video',
+                length: 0,
+                src: 'assets/v-rema.mp4',
+                preview:
+                  'assets/v-rema.mp4',
+                link: '',
+                linkText: false,
+                time: timestamp()
+              },
+
+              {
+                id: 'rema-4',
+                type: 'photo',
+                length: 0,
+                src: 'assets/rema-3.jpg',
+                preview:
+                'assets/rema-3.jpg',
+                link: '',
+                linkText: false,
+                time: timestamp()
+              }
+            ]
+          },
+          {
+            id: 'hamdy',
+            photo:
+            'assets/hamdy-1.jpg',
+            name: 'Mohamed Hamdy',
+            time: timestamp(),
+            items: [
+              {
+                id: 'hamdy-1',
+                type: 'photo',
+                length: 5,
+                src: 'assets/hamdy-1.jpg',
+                preview:
+                  'assets/hamdy-1.jpg',
+                link: '',
+                linkText: false,
+                time: timestamp()
+              },
+              {
+                id: 'hamdy-2',
+                type: 'photo',
+                length: 3,
+                src: 'assets/hamdy-2.jpg',
+                preview:
+                  'assets/hamdy-2.jpg',
+                link: 'https://www.facebook.com/hamdino.soska',
+                linkText: "my Fb",
+                time: timestamp()
+              },
+              {
+                id: 'hamdy-3',
+                type: 'photo',
+                length: 2,
+                src: 'assets/hamdy-3.jpg',
+                preview:
+                  'assets/hamdy-3.jpg',
+                link: 'https://www.facebook.com/hamdino.soska',
+                linkText: false,
+                time: timestamp()
+              }
+            ]
+          },
+        ]
+      });
+    </script>
+  </body>
+</html>
