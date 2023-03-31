@@ -8,8 +8,11 @@ body {
 
 .storiesWrapper {
   padding: 12px;
-  max-width: 500px;
+  max-width: fit-content;
   margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 5px;
 }
 
 h1 {
